@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+MySpotifyAI
+MySpotifyAI is a web-based Spotify client that leverages the power of modern web technologies and artificial intelligence to provide a personalized and interactive music experience. With seamless integration of the Spotify API, user authentication, and an AI-powered chat interface, MySpotifyAI offers intelligent song recommendations tailored to your listening habits and emotional state.
+
 ## Getting Started
 
 First, run the development server:
