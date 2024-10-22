@@ -1,9 +1,11 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 import { Music, Code, Cpu, Server, Sparkles, Split } from 'lucide-react';
 
 export default function About() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <Navigation />
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">

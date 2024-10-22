@@ -1,79 +1,12 @@
-"use client"
 import React from 'react';
 import { Music, Sparkles, MessageCircle, Brain, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import Navigation from './components/Navigation';
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navigationLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Features', href: '/features' },
-    { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <nav className="px-6 py-4 border-b border-zinc-800 sticky top-0 bg-black/95 backdrop-blur-sm z-50">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <Music className="h-8 w-8 text-green-500" />
-            <span className="text-xl font-bold">MySpotifyAI</span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navigationLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-zinc-400 hover:text-white transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
-            <button className="bg-green-500 hover:bg-green-400 text-black font-bold py-2 px-6 rounded-full">
-              Login with Spotify
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-zinc-900 border-b border-zinc-800 py-4">
-            <div className="container mx-auto px-6 flex flex-col gap-4">
-              {navigationLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-zinc-400 hover:text-white transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
-              ))}
-              <button className="bg-green-500 hover:bg-green-400 text-black font-bold py-2 px-6 rounded-full w-full">
-                Login with Spotify
-              </button>
-            </div>
-          </div>
-        )}
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-20">
